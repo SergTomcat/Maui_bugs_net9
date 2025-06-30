@@ -29,6 +29,9 @@ namespace MauiApp1.Pages
 				var popup = new MyPopup();
 
 			var resultPop = await Shell.Current.ShowPopupAsync<Result?>(popup, new PopupOptions() { Shape = null, CanBeDismissedByTappingOutsideOfPopup = false }).ConfigureAwait(false);
+
+			// Repeating calls of popup sometimes never completes ShowPopupAsync task
+
 			var result = resultPop.Result;
 
 				if (result is null)
