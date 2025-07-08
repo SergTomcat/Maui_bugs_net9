@@ -5,7 +5,13 @@
              x:Class="MauiApp1.Pages.Controls.MyPopup"
              xmlns:data="clr-namespace:MauiApp1.Data"
              x:TypeArguments="data:Result"
+             HorizontalOptions="FillAndExpand"
+             Margin="0"
+             Padding="0"
+             VerticalOptions="End"
+             BackgroundColor="CadetBlue"
              >
+	<Grid HorizontalOptions="FillAndExpand" ColumnDefinitions="*">
     <VerticalStackLayout>
         <Label 
             Text="Welcome to .NET MAUI!"
@@ -16,4 +22,5 @@
 		<Button Text="OK" Clicked="Ok_handler"/>
 		<Button Text="Cancel" Clicked="Cancel_handler"/>
 	</VerticalStackLayout>
+	</Grid>
 </toolkit:Popup>
